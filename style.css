@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.hello {
+  display: flex;
+  margin: 50px 0;
+}
+
+section.hello .message {
+  font-size: 32px;
+  font-weight: bold;
+  color: #444;
+}
+
+section.hello .time {
+  font-size: 54px;
+  margin-bottom: 10px;
+}
+
+section.todo {
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+section.todo .title {
+  margin-bottom: 10px;
+  padding: 0 20px;
+  font-weight: bold;
+  color: #444;
+}
+
+section.todo ul.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.todo ul.todo-list>li.todo-item {
+  width: 180px;
+  height: 140px;
+  border: 2px solid #efefef;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+section.todo.other ul.todo-list {
+  flex-direction: column;
+}
+
+section.todo.other ul.todo-list>li.todo-item {
+  width: 780px;
+  height: 70px;
+}
+
+section.todo ul.todo-list>li.todo-item .top,
+section.todo ul.todo-list>li.todo-item .bottom {
+  color: #cecece;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+section.todo ul.todo-list>li.todo-item .top {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+section.todo ul.todo-list>li.todo-item .bottom {
+  position: absolute;
+  bottom: 10px;
+}
+
+section.todo ul.todo-list>li.todo-item .tag {
+  width: 30px;
+  height: 6px;
+  border-radius: 3px;
+  position: absolute;
+  right: -3px;
+}
+
+section.todo ul.todo-list>li.todo-item .tag.max {
+  background: #ff6688;
+}
+
+section.todo ul.todo-list>li.todo-item .tag.urgent {
+  background: #ffa73b;
+}
+
+section.todo ul.todo-list>li.todo-item .tag.matter {
+  background: #6699ff;
+}
+
+section.todo ul.todo-list>li.todo-item .tag.normal {
+  background: #55de66;
+}
+
+section.todo ul.todo-list>li.todo-item .content {
+  max-height: 72px;
+  line-height: 1.5;
+  word-break: break-all;
+  overflow: hidden;
+  /* word: 30; */
+}
