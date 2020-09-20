@@ -23,6 +23,7 @@ body {
 section.hello {
   display: flex;
   align-items: center;
+  min-width: 240px;
   margin: 50px 0;
 }
 
@@ -32,9 +33,22 @@ section.hello .time-icon i {
   margin-right: 80px;
 }
 
+@media (max-width:600px) {
+  section.hello .time-icon i {
+    margin-right: 60px;
+  }
+}
+
+@media (max-width:500px) {
+  section.hello .time-icon i {
+    font-size: 72px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
 section.hello .hello-message {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   font-size: 32px;
@@ -43,13 +57,33 @@ section.hello .hello-message {
   margin-right: 40px;
 }
 
+@media (max-width:600px) {
+  section.hello .time-icon i {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width:500px) {
+  section.hello .hello-message {
+    align-items: flex-start;
+    font-size: 20px;
+  }
+}
+
 section.hello .now-time {
   font-size: 54px;
   margin-bottom: 10px;
 }
 
+@media (max-width:500px) {
+  section.hello .now-time {
+    font-size: 42px;
+  }
+}
+
 section.todo {
   max-width: 800px;
+  min-width: 240px;
   margin-bottom: 20px;
 }
 
@@ -76,6 +110,35 @@ section.todo ul.todo-list>li.todo-item {
   overflow: hidden;
 }
 
+@media (max-width:800px) {
+  section.todo {
+    width: 90vw;
+  }
+
+  section.todo ul.todo-list>li.todo-item {
+    width: calc(33.3% - 20px);
+  }
+}
+
+@media (max-width:680px) {
+  section.todo ul.todo-list>li.todo-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width:680px) {
+  section.todo ul.todo-list>li.todo-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width:360px) {
+  section.todo ul.todo-list>li.todo-item {
+    width: calc(100% - 20px);
+    height: 120px;
+  }
+}
+
 section.todo.other ul.todo-list {
   flex-direction: column;
 }
@@ -83,6 +146,16 @@ section.todo.other ul.todo-list {
 section.todo.other ul.todo-list>li.todo-item {
   width: 780px;
   height: 70px;
+}
+
+@media (max-width:800px) {
+  section.todo.other {
+    width: 90vw;
+  }
+
+  section.todo.other ul.todo-list>li.todo-item {
+    width: inherit;
+  }
 }
 
 section.todo ul.todo-list>li.todo-item .top,
